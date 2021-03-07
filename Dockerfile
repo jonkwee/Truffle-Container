@@ -21,6 +21,9 @@ RUN printf "y" | yum update -y && \
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" && \
     nvm install --lts && \
     npm install -g truffle && \
+    npm install -g ganache-cli && \
     mkdir truffle
+
+EXPOSE 8545
 
 CMD ["bin/bash"]
